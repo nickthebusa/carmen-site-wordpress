@@ -1,0 +1,71 @@
+.content-resources {
+  .wp-block-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .wp-block-group__inner-container {
+      background-color: rgba(var(--card-bg-color), 1);
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      width: fit-content;
+
+      li {
+        list-style: none;
+        position: relative;
+        padding-left: 2rem;
+        background-color: #f9f9f9;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-right: 1rem;
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+      }
+
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #000;
+        /* the bullet's own distinct color/background */
+      }
+    }
+  }
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resources-list {
+  padding: 0 0 1rem 0;
+}
+
+.resources-list li {
+  list-style: square;
+  list-style-position: inside;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.resources .card {
+  margin: 0 0 3rem 0;
+}
+
+@media (max-width: 500px) {
+  .resources-list {
+    flex-direction: column;
+    padding: 0;
+  }
+}

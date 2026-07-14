@@ -1,0 +1,6 @@
+{
+    "name": "nickthebusa/carmen-site-wordpress",
+    "require-dev": {
+        "php-stubs/wordpress-stubs": "^7.0"
+    }
+}

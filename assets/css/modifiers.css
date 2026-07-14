@@ -1,0 +1,62 @@
+/* for use in wordpress additional classes */
+
+/* image modifiers */
+.page-content .wp-block-image.image-small {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+}
+.page-content .wp-block-image.image-mini {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100px;
+}
+
+.page-content .wp-block-image.image-left {
+  align-self: flex-start;
+}
+
+.page-content .wp-block-image.image-right {
+  align-self: flex-end;
+}
+
+/* image group */
+.page-content .wp-block-group.image-group {
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.page-content .wp-block-group.image-group .wp-block-image {
+  margin: 0;
+}
+
+/* image horizontal group */
+.page-content .wp-block-group.image-group.horizontal {
+  display: flex;
+  border-radius: 1rem;
+  gap: 0;
+}
+
+.page-content .wp-block-group.image-group.horizontal > figure {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-content .wp-block-group.image-group.horizontal > .wp-block-image img {
+  display: block;
+  width: 100%;
+  height: clamp(200px, 25vw, 400px);
+  object-fit: cover;
+}
+
+.page-content .wp-block-group.image-group.horizontal>figure:first-child img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.page-content .wp-block-group.image-group.horizontal>figure:last-child img {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
