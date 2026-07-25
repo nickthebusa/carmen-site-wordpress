@@ -1,6 +1,7 @@
 {
     "name": "nickthebusa/carmen-site-wordpress",
     "require-dev": {
-        "php-stubs/wordpress-stubs": "^7.0"
+        "php-stubs/wordpress-stubs": "^7.0",
+        "php-stubs/acf-pro-stubs": "^6.8"
     }
 }

@@ -57,7 +57,6 @@ function your_theme_assets()
   wp_enqueue_style('general-css', get_template_directory_uri() . '/assets/css/general.css');
   wp_enqueue_style('content-css.', get_template_directory_uri() . '/assets/css/content.css');
   wp_enqueue_style('modifiers-css.', get_template_directory_uri() . '/assets/css/modifiers.css');
-  wp_enqueue_style('hero-css', get_template_directory_uri() . '/assets/css/hero.css');
 
   // Base styles — loaded on every page
   wp_enqueue_style('nav-css', get_template_directory_uri() . '/assets/css/nav.css');
@@ -113,23 +112,9 @@ function your_theme_fonts()
 }
 add_action('wp_enqueue_scripts', 'your_theme_fonts');
 
-/* helper function to apply style to hero per page */
-function your_theme_get_hero_class()
-{
-  if (is_front_page()) {
-    return 'hero-home';
-  } elseif (is_page('contact')) {
-    return 'hero-contact';
-  } elseif (is_page('resources')) {
-    return 'hero-resources';
-  } elseif (is_page('services') || is_singular('service')) {
-    return 'hero-services';
-  }
-  return '';
-}
 
 /* helper to apply style to page-content per page */
-function your_theme_get_page_content_class()
+function get_page_content_class()
 {
   if (is_front_page()) {
     return 'content-home';
@@ -142,3 +127,4 @@ function your_theme_get_page_content_class()
   }
   return '';
 }
+
