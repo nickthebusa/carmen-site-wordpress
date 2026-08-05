@@ -90,26 +90,6 @@ section {
 .card p {
   margin: 0 0 0.5rem 0;
 }
-.img-overlay {
-  display: flex;
-  justify-content: flex-end;
-}
-.img-overlay img {
-  width: auto;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-.card ,.img-overlay {
-  grid-row: 1 / 2;
-}
-.overlap-layout {
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  align-self: center;
-}
 .group-div {
   display: flex;
   flex-direction: column;
