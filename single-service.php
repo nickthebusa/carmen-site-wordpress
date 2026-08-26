@@ -12,14 +12,18 @@
     ),
   ));
   ?>
+
   <?php echo render_block(array('blockName' => 'carmen/service-dropdown', 'attrs' => array())); ?>
-  <?php
-  if (have_posts()) :
-    while (have_posts()) : the_post();
-      the_content();
-    endwhile;
-  endif;
-  ?>
+
+  <div class="page-content <?php echo esc_attr(get_page_content_class()); ?>">
+    <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post();
+        the_content();
+      endwhile;
+    endif;
+    ?>
+  </div>
 
 </main>
 
