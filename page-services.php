@@ -10,7 +10,6 @@
       endwhile;
     endif;
     ?>
-
   </div>
 
 </main>

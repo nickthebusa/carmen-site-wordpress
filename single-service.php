@@ -13,8 +13,6 @@
   ));
   ?>
 
-  <?php echo render_block(array('blockName' => 'carmen/service-dropdown', 'attrs' => array())); ?>
-
   <div class="page-content <?php echo esc_attr(get_page_content_class()); ?>">
     <?php
     if (have_posts()) :
