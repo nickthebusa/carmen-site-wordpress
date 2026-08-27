@@ -68,10 +68,6 @@ function your_theme_assets()
   }
   if (is_page('services') || is_singular('service')) {
     wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/services.css');
-    wp_enqueue_style('services-dropdown-css', get_template_directory_uri() . '/assets/css/services-dropdown.css');
-  }
-  if (is_page('contact')) {
-    wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css');
   }
   if (is_page('resources')) {
     wp_enqueue_style('resources-css', get_template_directory_uri() . '/assets/css/resources.css');
