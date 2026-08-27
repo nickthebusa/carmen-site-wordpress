@@ -173,7 +173,7 @@ hamburger #menu a:hover {
 
 @media (max-width: 450px) {
   nav {
-    padding: 0.3rem 1rem 1rem 1rem;
+    padding: 0.3rem 0.5rem 0.8rem 0.5rem;
   }
   nav .logo-and-name a .txt-wrapper h1{
     font-size: 1.3rem;

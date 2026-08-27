@@ -26,7 +26,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--main-font);
+  /*font-family: var(--main-font);*/
   background-color: rgba(var(--bg-color), 1);
   color: rgba(var(--txt-color), 1);
   overflow-x: hidden;
@@ -36,12 +36,11 @@ body {
 }
 h2, h3, h4 {
   font-size: 1.6rem;
-  text-align: center;
+  text-align: left;
   font-weight: 500;
   letter-spacing: 1px;
   text-decoration-thickness: 1px;
-  font-family: var(--decoration-font);
-  margin: 0.5rem 0;
+  /*font-family: var(--decoration-font);*/
 }
 h3 {
   font-size: 1.3rem;
@@ -52,7 +51,7 @@ h4 {
   text-decoration: underline;
 }
 p, li {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 a {
   color: rgba(var(--link-color), 1);
@@ -80,35 +79,15 @@ section {
   align-items: center;
 }
 .card {
-  background-color: rgba(var(--card-bg-color), 1);
-  padding: 2rem;
+  background-color: rgba(var(--bg-color), 1);
+  padding: 1rem;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
   z-index: 1;
   align-self: center;
 }
 .card p {
   margin: 0 0 0.5rem 0;
-}
-.img-overlay {
-  display: flex;
-  justify-content: flex-end;
-}
-.img-overlay img {
-  width: auto;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-.card ,.img-overlay {
-  grid-row: 1 / 2;
-}
-.overlap-layout {
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  align-self: center;
 }
 .group-div {
   display: flex;

@@ -9,10 +9,8 @@
 .page-content h2,
 .page-content h3,
 .page-content h4 {
-  font-family: var(--decoration-font);
   margin: 0;
   width: 100%;
-  text-align: left;
 }
 
 /* Paragraphs */
@@ -36,7 +34,7 @@
   display: block;
   max-width: 100%;
   height: auto;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
 }
 
 .page-content .wp-block-image figcaption {

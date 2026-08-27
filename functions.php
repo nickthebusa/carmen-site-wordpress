@@ -57,7 +57,6 @@ function your_theme_assets()
   wp_enqueue_style('general-css', get_template_directory_uri() . '/assets/css/general.css');
   wp_enqueue_style('content-css.', get_template_directory_uri() . '/assets/css/content.css');
   wp_enqueue_style('modifiers-css.', get_template_directory_uri() . '/assets/css/modifiers.css');
-  wp_enqueue_style('hero-css', get_template_directory_uri() . '/assets/css/hero.css');
 
   // Base styles — loaded on every page
   wp_enqueue_style('nav-css', get_template_directory_uri() . '/assets/css/nav.css');
@@ -69,10 +68,6 @@ function your_theme_assets()
   }
   if (is_page('services') || is_singular('service')) {
     wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/services.css');
-    wp_enqueue_style('services-dropdown-css', get_template_directory_uri() . '/assets/css/services-dropdown.css');
-  }
-  if (is_page('contact')) {
-    wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css');
   }
   if (is_page('resources')) {
     wp_enqueue_style('resources-css', get_template_directory_uri() . '/assets/css/resources.css');
@@ -113,23 +108,36 @@ function your_theme_fonts()
 }
 add_action('wp_enqueue_scripts', 'your_theme_fonts');
 
-/* helper function to apply style to hero per page */
-function your_theme_get_hero_class()
+
+function your_theme_customize_register($wp_customize)
 {
-  if (is_front_page()) {
-    return 'hero-home';
-  } elseif (is_page('contact')) {
-    return 'hero-contact';
-  } elseif (is_page('resources')) {
-    return 'hero-resources';
-  } elseif (is_page('services') || is_singular('service')) {
-    return 'hero-services';
-  }
-  return '';
+  $wp_customize->add_section('your_theme_typography', array(
+    'title' => 'Typography',
+    'priority' => 30,
+  ));
+
+  $wp_customize->add_setting('body_font_family', array(
+    'default' => "'Century Gothic', sans-serif",
+    'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  $wp_customize->add_control('body_font_family', array(
+    'label' => 'Body Font (CSS font-family value)',
+    'section' => 'your_theme_typography',
+    'type' => 'text',
+  ));
 }
+add_action('customize_register', 'your_theme_customize_register');
+
+function your_theme_customizer_css() {
+  $font = get_theme_mod('body_font_family', "'Century Gothic', sans-serif");
+  echo '<style>body { font-family: ' . esc_attr($font) . '; }</style>';
+}
+add_action('wp_head', 'your_theme_customizer_css');
+
 
 /* helper to apply style to page-content per page */
-function your_theme_get_page_content_class()
+function get_page_content_class()
 {
   if (is_front_page()) {
     return 'content-home';
