@@ -76,3 +76,8 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* modifying p tags */
+.wp-block-paragraph.side-margin-small {
+  margin: 0 1rem;
+}
