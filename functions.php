@@ -108,6 +108,7 @@ function your_theme_fonts()
 }
 add_action('wp_enqueue_scripts', 'your_theme_fonts');
 
+<<<<<<< HEAD
 
 function your_theme_customize_register($wp_customize)
 {
@@ -135,6 +136,8 @@ function your_theme_customizer_css() {
 }
 add_action('wp_head', 'your_theme_customizer_css');
 
+=======
+>>>>>>> 7268862fdb4856bc709e6e5841921be844676efa
 
 /* helper to apply style to page-content per page */
 function get_page_content_class()
@@ -150,3 +153,4 @@ function get_page_content_class()
   }
   return '';
 }
+
